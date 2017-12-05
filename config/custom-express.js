@@ -1,20 +1,21 @@
 var express = require('express');
 var consign = require('consign');
-var bodyparser = require('body-parser');
+var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 
-module.exports = function() {
-    var app = express();
+module.exports = function(){
+  var app = express();
 
-    app.use(bodyparser.urlencoded({extend: true}));
-    app.use(bodyparser.json());
+  app.use(bodyParser.urlencoded({extended: true}));
+  app.use(bodyParser.json());
 
-    app.use(expressValidator());
+  app.use(expressValidator());
 
-    consign()
-    .include('controllers')
-    .then('persistencia')
-    .into(app) 
+  consign()
+   .include('controllers')
+   .then('persistencia')
+   .then('servicos')
+   .into(app);
 
-    return app;
+  return app;
 }

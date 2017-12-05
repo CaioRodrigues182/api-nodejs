@@ -1,0 +1,23 @@
+{
+  "name": "payfast",
+  "version": "1.0.0",
+  "description": "API para pagamentos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API",
+    "pagamentos",
+    "gateway"
+  ],
+  "author": "Caio Rodrigues",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.6",
+    "express": "^4.16.2",
+    "express-validator": "^4.3.0",
+    "mysql": "^2.15.0"
+  }
+}
